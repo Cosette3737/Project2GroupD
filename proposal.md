@@ -6,7 +6,7 @@ We've chosen this dataset and topic because there is a variety of data in this d
 Dataset: https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020
 ![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/CSV%20Metadata.PNG)
 
-Inspiring Imagery:
+### Inspiring Imagery:
 1. Our first idea is creating a dashboard with data on the top 5 drivers of all time with a dropdown menu to switch from driver to driver.
 ![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/Dashboard.PNG)
 
@@ -15,3 +15,8 @@ Inspiring Imagery:
 
 3.To further illustrate the data in #2, we will create a heat map displaying data on all wins by country using MapBox to create it.
 
+
+
+
+
+Our Repository: https://github.com/Cosette3737/Project2GroupD
