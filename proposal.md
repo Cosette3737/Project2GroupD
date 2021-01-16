@@ -14,7 +14,7 @@ Dataset: https://www.kaggle.com/rohanrao/formula-1-world-championship-1950-2020
 ![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/Over%20time%20Bar%20chart.PNG)
 
 3.To further illustrate the data in #2, we will create a heat map displaying data on all wins by country using MapBox to create it.
-
+![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/Heat%20map%20Example.png)
 
 
 
