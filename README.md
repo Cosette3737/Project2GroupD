@@ -13,9 +13,11 @@ Tasks
 - [ ] 6. Choose charting library for some visualizations.
 - [ ] 7. Read documentation on said dictionary.
 - [ ] 8. Examine code behind chosen illustrations to help implement them into our code.
-- [ ] 9. With this knowledge in mind, begin coding HTML, CSS, and Javascript elements using these. 
+- [ ] 9. With this knowledge in mind, begin coding HTML, CSS, and Javascript elements using these.
+- [ ] 10. Convert CSV's to JSON for Flask
+- [ ] 11. Create Flask app
 
-As famed fictional formula 1 driver, Jean Girard once Said...
+As famed, fictional Formula 1 driver, Jean Girard once Said...
 
 >Ah, "Reecky Booby"! Now we shall dance...
 >***and yes, it will be a slow jam!***
