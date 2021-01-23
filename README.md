@@ -10,7 +10,7 @@ Tasks
 - [x] 3. Write serviceable readme for the initial use.
 - [x] 4. Examine CSVs and begin ETL process by creating postgresSQL database.
 - [x] 5. Write SQL requests for uniform databases for each of us.
-- [ ] 6. Choose charting library for some visualizations.
+- [x] 6. Chose Geochart as our new library and have examined code for it.
 - [ ] 7. Read documentation on said dictionary.
 - [ ] 8. Examine code behind chosen illustrations to help implement them into our code.
 - [ ] 9. With this knowledge in mind, begin coding HTML, CSS, and Javascript elements using these.
