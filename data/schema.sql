@@ -50,17 +50,6 @@ CREATE TABLE races (
     url VARCHAR
 );
 
-CREATE TABLE lap_times (
-    raceId INTEGER PRIMARY KEY,
-    FOREIGN KEY (raceId) REFERENCES races(raceId),
-    driverId INTEGER,
-    FOREIGN KEY (driverId) REFERENCES drivers(driverId),
-    lap VARCHAR,
-    place VARCHAR,
-    lapTime VARCHAR,
-    milliseconds VARCHAR
-);
-
 CREATE TABLE results (
     resultId INTEGER PRIMARY KEY,
     raceId INTEGER,
