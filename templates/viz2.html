@@ -1,6 +1,25 @@
-{% extends "base.html" %}
-{% block main %}
-<h1>
-    Viz 2
-</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bar Chart Race</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/Racechart.css">
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <button>Stop</button>
+    <svg id="bar-chart-race">
+      <g class="chart-container">
+        <text class="chart-title"></text>
+        <g class="x-axis"></g>
+        <g class="y-axis"></g>
+        <g class="columns"></g>
+        <text class="current-date"></text>
+      </g>
+    </svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.4.0/d3.min.js" integrity="sha512-dFInEG45P+hskbMspCzeyoLQsxcSZN9OF/FC0ISApJCvz7MuqASQ9I4pi49Ex+tLIeZhj9tx2mupQNwq84tfyg==" crossorigin="anonymous"></script>
+    <script src="/static/js/BarChartRace.js"></script>
+    <script src="/static/js/dataGenerator.js"></script>
+    <script src="/static/js/index.js"></script>
+  </body>
+</html>
