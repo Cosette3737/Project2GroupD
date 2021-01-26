@@ -1,5 +1,5 @@
 -- import csv files after creating the tables in the same order 
--- that the tables were created.
+-- that the tables were created. 
 
 CREATE TABLE circuits (
     circuitId INTEGER PRIMARY KEY,
@@ -74,3 +74,32 @@ CREATE TABLE results (
     statusId INTEGER,
     FOREIGN KEY (statusId) REFERENCES status(statusId)
 );
+
+CREATE TABLE nationalities (
+    nationality VARCHAR PRIMARY KEY,
+    country VARCHAR
+);
+
+-- create views to help with queries
+CREATE VIEW wins AS
+SELECT driverId, COUNT(place) AS "wins"
+FROM (
+	SELECT driverId, place
+	FROM results 
+	WHERE place = '1'
+) AS w
+GROUP BY driverId
+ORDER BY "wins" DESC;
+
+CREATE VIEW driverWins AS
+SELECT w.driverId, w.wins, d.forename, d.surname, d.nationality
+FROM wins AS w
+JOIN drivers AS d
+ON w.driverId=d.driverId
+ORDER BY w.wins DESC;
+
+CREATE VIEW countryWins AS
+SELECT nationality, SUM(wins) AS "wins"
+FROM driverWins
+GROUP BY nationality
+ORDER BY wins DESC;
