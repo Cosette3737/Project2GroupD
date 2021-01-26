@@ -49,12 +49,39 @@ def map_data():
 
     return jsonify(wins_per_country_list)
 
+@app.route('/race_chart_data', methods=['GET'])
+def race_chart_data():
+    #create engine to connect to SQL database
+    engine = create_engine("postgresql://postgres:postgres@localhost/formula1")
+    #connect to SQL database
+    connection = engine.connect()
 
-@app.route('/api_data', methods=['GET'])
-def api_data():
-    # data = data.get_api_data()
-    data = {"this": "is my api data"}
-    return jsonify(data)
+    # creat dataframe of wins per country from database
+    race_data = pd.read_sql('SELECT nationality, date \
+        FROM barchartracetable;', connection)
+
+    # convert dataframe to list of lists with header
+    race_chart_list = [race_data.columns.values.tolist()] \
+        + race_data.values.tolist()
+
+    return jsonify(race_chart_list)
+
+@app.route('/top5_data', methods=['GET'])
+def top5_data():
+    #create engine to connect to SQL database
+    engine = create_engine("postgresql://postgres:postgres@localhost/formula1")
+    #connect to SQL database
+    connection = engine.connect()
+
+    # creat dataframe of wins per country from database
+    top5_data = pd.read_sql('SELECT surname, wins FROM driverWins \
+    LIMIT 5;', connection)
+
+    # convert dataframe to list of lists with header
+    top5_list = top5_data.values.tolist()
+
+    return jsonify(top5_list)
+
 
 
 if __name__ == '__main__':
