@@ -74,8 +74,13 @@ def top5_data():
     connection = engine.connect()
 
     # creat dataframe of wins per country from database
-    top5_data = pd.read_sql('SELECT surname, wins FROM driverWins \
-    LIMIT 5;', connection)
+    top5_data = pd.read_sql('SELECT dw.wins, dw.forename, \
+        dw.surname, dw.nationality, d.dob, d.driverNumber, d.url \
+        FROM driverWins AS dw \
+        JOIN drivers AS d \
+        ON dw.driverId=d.driverId \
+        ORDER BY dw.wins DESC\
+        LIMIT 5;', connection)
 
     # convert dataframe to list of lists with header
     top5_list = top5_data.values.tolist()
