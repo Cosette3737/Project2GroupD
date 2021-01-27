@@ -65,8 +65,7 @@ def race_chart_data():
         FROM barchartracetable;', connection)
 
     # convert dataframe to list of lists with header
-    race_chart_list = [race_data.columns.values.tolist()] \
-        + race_data.values.tolist()
+    race_chart_list = race_data.values.tolist()
 
     return jsonify(race_chart_list)
 
