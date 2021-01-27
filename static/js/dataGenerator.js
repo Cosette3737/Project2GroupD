@@ -40,16 +40,16 @@
 ];
 
 
-function generateDataSets({ size = 1 }) {
+function generateDataSets() {
   fetch('/race_chart_data')
   .then(function (response) {
     return response.json();
   }).then(function (data) {
-    console.log('GET response:');
+    console.log(data.text());
     let raceData = data;
-    // log data
-    console.log(raceData);
-  });
+    // // run it through
+
+
   const dataSets = [];
   const maxLimitForValue = 2000;
   const minLimitForValue = 200;
@@ -123,26 +123,24 @@ function generateDataSets({ size = 1 }) {
     } else if (raceData[0] ="Monegasque") {
       monegasqueCounter += 1;
     } else if (raceData[0] ="Polish") {
-      polishCounter += 1;
-    } else (raceData[0] ="Venezuelan")
+      polishCounter += 1; 
+    } else if (raceData[0] ="Venezuelan") {
       venezuelanCounter += 1;
-
+    }
     dataSets.push({
-      date: raceData,
+      date: raceData[1],
       dataSet: nationalities
         .sort(function() {
           return Math.random() - 0.5;
         })
         .slice(0, maximumModelCount)
-        .map(nationality => ({
+        .map(nationality => {
+          return {
           name: nationality,
-          value:
-            Math.random() * (maxLimitForValue - minLimitForValue) +
-            minLimitForValue
-        }))
+          value: Math.random() * (maxLimitForValue - minLimitForValue) + minLimitForValue
+        }
+          
+      })
     });
-  
+    return dataSets;
   }
-
-  return dataSets;
-}
