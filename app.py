@@ -29,6 +29,10 @@ def viz2():
 def viz3():
     return render_template('viz3.html')
 
+@app.route('/credits')
+def credits():
+    return render_template('credits.html')
+
 @app.route('/map_data', methods=['GET'])
 def map_data():
     #create engine to connect to SQL database
