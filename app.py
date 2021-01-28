@@ -51,7 +51,9 @@ def map_data():
     wins_per_country_list = [wins_per_country.columns.values.tolist()] \
         + wins_per_country.values.tolist()
 
-    return jsonify(wins_per_country_list)
+    response = jsonify(wins_per_country_list)
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 
 @app.route('/race_chart_data', methods=['GET'])
 def race_chart_data():
@@ -67,7 +69,9 @@ def race_chart_data():
     # convert dataframe to list of lists with header
     race_chart_list = race_data.values.tolist()
 
-    return jsonify(race_chart_list)
+    response = jsonify(race_chart_list)
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 
 @app.route('/top5_data', methods=['GET'])
 def top5_data():
