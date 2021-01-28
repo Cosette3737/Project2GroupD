@@ -34,9 +34,9 @@ function generateDataSets(raceData) {
   
 
   const dataSets = [];
-  const maxLimitForValue = 2000;
-  const minLimitForValue = 200;
-  const maximumModelCount = 10;
+  // const maxLimitForValue = 2000;
+  // const minLimitForValue = 200;
+  // const maximumModelCount = 10;
   var britishCounter = 0;
   var germanCounter = 0;
   var brazilianCounter = 0;
@@ -62,69 +62,71 @@ function generateDataSets(raceData) {
   var venezuelanCounter = 0;
   
   for (let i = 0; i < raceData.length; i++) {
-    if (raceData[0] == "British") {
+    if (raceData[i][0] == "British") {
       britishCounter += 1;
-    } else if (raceData[0] =="German"){
+    } else if (raceData[i][0] =="German"){
       germanCounter += 1;
-    } else if (raceData[0] =="Brazilian"){
+    } else if (raceData[i][0] =="Brazilian"){
       brazilianCounter += 1;
-    } else if (raceData[0] =="French"){
+    } else if (raceData[i][0] =="French"){
       frenchCounter += 1;
-    } else if (raceData[0] =="Finnish") {
+    } else if (raceData[i][0] =="Finnish") {
       finnishCounter += 1;
-    } else if (raceData[0] =="Italian") {
+    } else if (raceData[i][0] =="Italian") {
       italianCounter += 1;
-    } else if (raceData[0] =="Australian") {
+    } else if (raceData[i][0] =="Australian") {
       australianCounter += 1;
-    } else if (raceData[0] =="Austrian") {
+    } else if (raceData[i][0] =="Austrian") {
       austrianCounter += 1;
-    } else if (raceData[0] =="Argentine"){
+    } else if (raceData[i][0] =="Argentine"){
       argentineCounter += 1;
-    } else if (raceData[0] =="American") {
+    } else if (raceData[i][0] =="American") {
       americanCounter += 1;
-    } else if (raceData[0] =="Spanish") {
+    } else if (raceData[i][0] =="Spanish") {
       spanishCounter += 1;
-    } else if (raceData[0] =="Canadian") {
+    } else if (raceData[i][0] =="Canadian") {
       canadianCounter += 1;
-    } else if (raceData[0] =="New Zealander"){
+    } else if (raceData[i][0] =="New Zealander"){
       newzealanderCounter += 1;
-    } else if (raceData[0] =="Swedish") {
+    } else if (raceData[i][0] =="Swedish") {
       swedishCounter += 1;
-    } else if (raceData[0] =="Belgian") {
+    } else if (raceData[i][0] =="Belgian") {
       belgianCounter += 1;
-    } else if (raceData[0] =="South African"){
+    } else if (raceData[i][0] =="South African"){
       southafricanCounter += 1;
-    } else if (raceData[0] =="Dutch"){
+    } else if (raceData[i][0] =="Dutch"){
       dutchCounter += 1;
-    } else if (raceData[0] =="Swiss"){
+    } else if (raceData[i][0] =="Swiss"){
       swissCounter += 1;
-    } else if (raceData[0] =="Colombian") {
+    } else if (raceData[i][0] =="Colombian") {
       colombianCounter += 1;
-    } else if (raceData[0] =="Mexican") {
+    } else if (raceData[i][0] =="Mexican") {
       mexicanCounter += 1;
-    } else if (raceData[0] =="Monegasque") {
+    } else if (raceData[i][0] =="Monegasque") {
       monegasqueCounter += 1;
-    } else if (raceData[0] =="Polish") {
+    } else if (raceData[i][0] =="Polish") {
       polishCounter += 1; 
-    } else if (raceData[0] =="Venezuelan") {
+    } else if (raceData[i][0] =="Venezuelan") {
       venezuelanCounter += 1;
     }
     dataSets.push({
       date: raceData[i][1],
       dataSet: nationalities
-        .sort(function() {
-          return Math.random() - 0.5;
-        })
-        .slice(0, maximumModelCount)
+        // .sort(function() {
+        //   return Math.random() - 0.5;
+        // })
+        // .slice(0, maximumModelCount)
         .map(nationality => {
           return {
           name: nationality,
           value: Math.random() * (maxLimitForValue - minLimitForValue) + minLimitForValue
         }
-          
       })
+      
     });
-    
+    console.log(dataSets);
+    console.log(britishCounter);
+    console.log(americanCounter);
   }
   console.log(dataSets);
   return dataSets;
