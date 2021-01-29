@@ -58,14 +58,11 @@ body {
 }
 
 /* home page background image */
-.splash {
+body {
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.car44 {
   background-image: url("/static/images/car44.jpg");
 }
 
@@ -79,12 +76,6 @@ body {
 
 .active {
   color: #fff;
-}
-
-/* viz3 (map) */
-#regions_div {
-  width: 900px;
-  height: 500px;
 }
 
 .credits-link {
