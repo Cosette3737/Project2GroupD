@@ -22,7 +22,7 @@ svg {
   fill: #d3d3d3;
   font-weight: bold;
   text-anchor: middle;
-  dominant-baseline: center;
+  /*dominant-baseline: center;*/
 }
 
 .chart-container .current-date {
@@ -52,11 +52,11 @@ svg {
 .columns .column-container .column-title {
   text-anchor: end;
   fill: white;
-  dominant-baseline: middle;
+  /*dominant-baseline: middle;*/
   font-size: 14px;
 }
 
 .columns .column-container .column-value {
-  dominant-baseline: middle;
+  /*dominant-baseline: middle;*/
   font-size: 14px;
 }
