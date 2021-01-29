@@ -2,7 +2,7 @@ const myChart = new BarChartRace("bar-chart-race");
 
 myChart
   .setTitle("Bar Chart Race Title")
-  .addDatasets(generateDataSets({ size: 5 }))
+  .addDatasets(generateDataSets({size: 1000}))
   .render();
 
 d3.select("button").on("click", function() {

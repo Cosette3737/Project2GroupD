@@ -1,6 +1,6 @@
 html
 body{
-    height: 100%;
+    height: 80%;
 
     /* The image used */
     background-image: url("/static/images/barchartbackground.jpg");
@@ -15,4 +15,41 @@ body{
 
 } 
 
-  
+#sample-metadata0{
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    z-index:1
+}
+#sample-metadata1{
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    z-index:2
+}
+
+
+#sample-metadata2{
+    position: absolute;
+    visibility: hidden;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    z-index:3
+}
+#sample-metadata3{
+    position: absolute;
+    visibility: hidden;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    z-index:4
+}
+#sample-metadata4{
+    position: absolute;
+    visibility: hidden;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    z-index:5
+}
