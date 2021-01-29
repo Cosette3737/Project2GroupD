@@ -59,11 +59,18 @@ body {
 
 /* home page background image */
 .splash {
-  background-image: url("/static/images/car44.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.car44 {
+  background-image: url("/static/images/car44.jpg");
+}
+
+.mapbackground {
+  background-image: url("/static/images/mapbackground.jpg");
 }
 
 .navbar-nav {
@@ -81,5 +88,9 @@ body {
 }
 
 .credits-link {
+  color: #333;
+}
+
+.credits a {
   color: #333;
 }
