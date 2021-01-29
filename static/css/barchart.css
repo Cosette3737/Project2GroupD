@@ -1,6 +1,6 @@
 html
 body{
-    height: 80%;
+    height: 100%;
 
     /* The image used */
     background-image: url("/static/images/barchartbackground.jpg");
@@ -15,13 +15,15 @@ body{
 
 } 
 
-#sample-metadata0{
+
+#sample_metadata0{
     position: absolute;
-    height: 500px;
+    visibility: visible;
+    height: 50%;
     width: 100%;
     z-index:1
 }
-#sample-metadata1{
+#sample_metadata1{
     position: absolute;
     height: 500px;
     width: 100%;
@@ -29,7 +31,7 @@ body{
 }
 
 
-#sample-metadata2{
+#sample_metadata2{
     position: absolute;
     visibility: hidden;
     height: 500px;
@@ -37,7 +39,7 @@ body{
     margin: 0 auto;
     z-index:3
 }
-#sample-metadata3{
+#sample_metadata3{
     position: absolute;
     visibility: hidden;
     height: 500px;
@@ -45,7 +47,7 @@ body{
     margin: 0 auto;
     z-index:4
 }
-#sample-metadata4{
+#sample_metadata4{
     position: absolute;
     visibility: hidden;
     height: 500px;
