@@ -1,24 +1,24 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Formula 1 Winners</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/viz1">Viz1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/viz2">Viz2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/viz3">Viz3</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Formula 1 Winners</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link {% if request.path=='/' %}active{%endif %}" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path=='/viz1' %}active{%endif %}" href="/viz1">Top 5</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path=='/viz2' %}active{%endif %}" href="/viz2">"Racing" Chart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path=='/viz3' %}active{%endif %}" href="/viz3">Map</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>

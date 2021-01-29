@@ -15,4 +15,43 @@ body{
 
 } 
 
-  
+
+#sample_metadata0{
+    position: absolute;
+    visibility: visible;
+    height: 50%;
+    width: 100%;
+    z-index:1
+}
+#sample_metadata1{
+    position: absolute;
+    height: 500px;
+    width: 100%;
+    z-index:2
+}
+
+
+#sample_metadata2{
+    position: absolute;
+    visibility: hidden;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    z-index:3
+}
+#sample_metadata3{
+    position: absolute;
+    visibility: hidden;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    z-index:4
+}
+#sample_metadata4{
+    position: absolute;
+    visibility: hidden;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    z-index:5
+}
