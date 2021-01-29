@@ -11,39 +11,15 @@
     <title>Formula 1 Winners</title>
 </head>
 <body class="splash mapbackground">
-    
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Formula 1 Winners</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/viz1">Top 5</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/viz2">"Racing" Chart</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/viz3">Map</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+
+  {% include 'navbar.html' %}
+  
   
   <main class="container">
     <div>
       <h1>Winners by Country</h1>
       <p class="lead">Hover over a country to see the number of wins from Formula 1 drivers of that nationality.</p>
-          <div class="bg-light p-5 rounded">
-            <div id="regions_div"></div>
-          </div>
+      <div id="regions_div"></div>
     </div>
   </main>
 
