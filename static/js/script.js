@@ -14,10 +14,12 @@ fetch('/top5_data')
     var firstname = topData.map(drivers =>drivers[1]);
     var lastname = topData.map(drivers =>drivers[2]);
     var nationality = topData.map(drivers =>drivers[3]);
-    var birthday = topData.map(drivers =>drivers[4]);
+    var birthday = (topData.map(drivers =>drivers[4]));
     var bio = topData.map(drivers =>drivers[6]);
     var rank = [1,2,3,4,5]
-    var Textout0 = (`Driver: ${firstname[0]}  ${lastname[0]} \n
+    console.log(wins);
+    var Textout0 = (
+                    `Driver: ${firstname[0]}  ${lastname[0]} 
                     Rank: ${rank[0]}\n
                     Wins: ${wins[0]}\n
                     Nationality:${nationality[0]} \n
@@ -56,56 +58,28 @@ fetch('/top5_data')
                     Birthday: ${birthday[4]}\n
                     Driver Bio: ${bio[4]}\n`)
         //console.log(Textout4); 
-
-        var demo_meta0 = d3.select("#sample_metadata0")
-        demo_meta0.html("");
-        demo_meta0.append("p").text(Textout0);
-                  //console.log(demo_meta1);
-        demo_meta0.append("img")
-            .attr("src","static/images/flag1.JPG")
-            .attr("width", 250)
-            .attr("height", 250)
-        console.log(demo_meta0);
+        document.getElementById("sample_metadata0").innerHTML += '<img width="150" height="150" src="static/images/id0.jpg">';
+        document.getElementById("sample_metadata1").innerHTML += '<img width="150" height="150" src="static/images/id1.JPG">';
+        document.getElementById("sample_metadata2").innerHTML += '<img width="150" height="150" src="static/images/id2.JPG">';
+        document.getElementById("sample_metadata3").innerHTML += '<img width="150" height="150" src="static/images/Sebid.jpg">';
+        document.getElementById("sample_metadata4").innerHTML += '<img width="150" height="150" src="static/images/id5.JPG">';
+        sample_metadata0.append(Textout0);
+        sample_metadata1.append(Textout1);
+        sample_metadata2.append(Textout2);
+        sample_metadata3.append(Textout3);
+        sample_metadata4.append(Textout4);
+        document.getElementById("sample_metadata0").innerHTML += '<img width="250" height="250" src="static/images/flag0.JPG">';
+        document.getElementById("sample_metadata1").innerHTML += '<img width="250" height="250" src="static/images/flag1.JPG">';
+        document.getElementById("sample_metadata2").innerHTML += '<img width="250" height="250" src="static/images/flag1.JPG">';
+        document.getElementById("sample_metadata3").innerHTML += '<img width="250" height="250" src="static/images/flag3.JPG">';
+        document.getElementById("sample_metadata4").innerHTML += '<img width="250" height="250" src="static/images/flag4.JPG">';
+   
+        document.getElementById("sample_metadata0").style.visibility='hidden'
+        document.getElementById("sample_metadata1").style.visibility='hidden'
+        document.getElementById("sample_metadata2").style.visibility='hidden'
+        document.getElementById("sample_metadata3").style.visibility='hidden'
+        document.getElementById("sample_metadata4").style.visibility='hidden';
         
-        // var demo_meta1 = d3.select("#sample_metadata1")
-        // demo_meta1.html("");
-        // demo_meta1.append("p").text(Textout1);
-        //           //console.log(demo_meta1);
-        // demo_meta1.append("img")
-        //     .attr("src","static/images/flag1.JPG")
-        //     .attr("width", 250)
-        //     .attr("height", 250)
-        // console.log(demo_meta1);
-          
-        // var demo_meta2 = d3.select("#sample_metadata2")
-        // demo_meta2.html("");
-        // demo_meta2.append("p").text(Textout2);
-        //           //console.log(demo_meta2);
-        // demo_meta2.append("img")
-        //     .attr("src","static/images/flag1.JPG")
-        //     .attr("width", 250)
-        //     .attr("height", 250)
-
-        
-        // var demo_meta3 = d3.select("#sample_metadata3")
-        // demo_meta3.html("");
-        // demo_meta3.append("p").text(Textout3);
-        //           //console.log(demo_meta3);
-        // demo_meta3.append("img")
-        //         .attr("src","static/images/flag3.JPG")
-        //         .attr("width", 250)
-        //         .attr("height", 250)
-          
-        // var demo_meta4 = d3.select("#sample_metadata4")
-        //     demo_meta4.html("");
-        //     demo_meta4.append("p").text(Textout4);
-        //           //console.log(demo_meta);
-        //     demo_meta4.append("img")
-        //         .attr("src","static/images/flag4.JPG")
-        //         .attr("width", 250)
-        //         .attr("height", 250)
-          
-          
 
     //console.log( wins[1], rank[1],nationality[1], birthday[1], number[1], bio[1]);
     var svgArea = d3.select("body").select("svg");
@@ -150,7 +124,7 @@ fetch('/top5_data')
         .attr('x', 400)
         .attr('y', 40)
         .attr('text-anchor', 'middle')
-        .text('Top 5 Winning Formula One Drivers')
+        
 
 
  // scale y to chart height
@@ -201,17 +175,40 @@ fetch('/top5_data')
                  .attr("fill", "black")
                  .transition()
                 .duration(500)
-        })
-    //     }))
-    // }
-//createBar();
+        });
+  
     function clickHandler() {
         clickvalue = (d3.select(this)._groups[0][0].__data__);
         console.log(clickvalue);
-        if (clickvalue = 95) {
-            sample_metadata0.visibility.hidden;
-    //     };
-    //     then 
-      };
-    }}
-    //        
+        if (clickvalue == 95) {
+            document.getElementById("sample_metadata0").style.visibility='visible';
+            document.getElementById("sample_metadata1").style.visibility='hidden';
+            document.getElementById("sample_metadata2").style.visibility='hidden';
+            document.getElementById("sample_metadata3").style.visibility='hidden';
+            document.getElementById("sample_metadata4").style.visibility='hidden';
+        } else if  (clickvalue == 91) {
+            document.getElementById("sample_metadata1").style.visibility='visible';
+            document.getElementById("sample_metadata0").style.visibility='hidden';
+            document.getElementById("sample_metadata2").style.visibility='hidden';
+            document.getElementById("sample_metadata3").style.visibility='hidden';
+            document.getElementById("sample_metadata4").style.visibility='hidden';
+        } else if (clickvalue == 51) {
+            document.getElementById("sample_metadata2").style.visibility='visible';
+            document.getElementById("sample_metadata1").style.visibility='hidden';
+            document.getElementById("sample_metadata0").style.visibility='hidden';
+            document.getElementById("sample_metadata3").style.visibility='hidden';
+            document.getElementById("sample_metadata4").style.visibility='hidden';
+        } else if (clickvalue == 41) {
+            document.getElementById("sample_metadata3").style.visibility='visible';
+            document.getElementById("sample_metadata1").style.visibility='hidden';
+            document.getElementById("sample_metadata2").style.visibility='hidden';
+            document.getElementById("sample_metadata0").style.visibility='hidden';
+            document.getElementById("sample_metadata4").style.visibility='hidden';
+        } else {
+            document.getElementById("sample_metadata4").style.visibility='visible';
+            document.getElementById("sample_metadata1").style.visibility='hidden';
+            document.getElementById("sample_metadata2").style.visibility='hidden';
+            document.getElementById("sample_metadata3").style.visibility='hidden';
+            document.getElementById("sample_metadata0").style.visibility='hidden';
+            } 
+      }; }
