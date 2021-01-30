@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bar Chart Race</title>
+{% extends "base.html" %}
+
+{% block customcss %}
     <link rel="stylesheet" type="text/css" href="/static/css/Racechart.css">
-    <meta charset="UTF-8" />
-  </head>
+{% endblock %}
+
+{% block title %}
+    <title>Formula 1 Winners - Bar Chart</title>
+{% endblock %}
   <body>
     {% include 'navbar.html' %}
     <button>Stop</button>
