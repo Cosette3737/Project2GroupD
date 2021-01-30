@@ -60,6 +60,7 @@ The home page introduces our proposal and uses a navbar to select which visualiz
 ![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/static/images/screenshot-home.png)
 
 ### Top 5 Winningest Drivers
+
 The first visualization showcases a interactive bar chart showing the top 5 Formula 1 drivers of all time.  When selecting a bar, the Driver's photo and information populates and displays within the same screen. 
 
 ![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/static/images/screenshot-top5.png)
