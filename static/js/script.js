@@ -19,15 +19,15 @@ fetch('/top5_data')
 
     var rank = [1,2,3,4,5]
     
-    var Textout0 = (
-                    `${firstname[0]}  ${lastname[0]} \n
-                    Rank: ${rank[0]}\n
-                    Wins: ${wins[0]}\n
-                    Nationality:${nationality[0]} \n
-                    Birthday:${birthday[0]}\n
-                    ${bio[0]}\n`
-                    )
-        console.log(Textout0); 
+    // var Textout0 = (
+    //                 `${firstname[0]}  ${lastname[0]} <br>
+    //                 Rank: ${rank[0]}\n
+    //                 Wins: ${wins[0]}\n
+    //                 Nationality:${nationality[0]} \n
+    //                 Birthday:${birthday[0]}\n
+    //                 ${bio[0]}\n`
+    //                 )
+    //     console.log(Textout0); 
 
         var Textout1 = (`${firstname[1]} ${lastname[1]} \n\n
                          Rank: ${rank[1]}'\n
@@ -41,7 +41,7 @@ fetch('/top5_data')
                     Rank: ${rank[2]}\n
                     Wins: ${wins[2]}\n
                     Nationality: ${nationality[2]}\n 
-                    Birthday: ${birthday[2]}\n
+                    Birthday: ${birthday[2]} <br>
                     `)
         //console.log(Textout2); 
 
@@ -60,12 +60,17 @@ fetch('/top5_data')
                     Birthday: ${birthday[4]}\n
                     `)
         //console.log(Textout4); 
-        document.getElementById("sample_metadata0").innerHTML += '<img width="250" height="250" src="static/images/id0.jpg">';
+        //document.getElementById("sample_metadata0").innerHTML += '<img width="250" height="250" src="static/images/id0.jpg">';
         document.getElementById("sample_metadata1").innerHTML += '<img width="250" height="250" src="static/images/id1.JPG">';
         document.getElementById("sample_metadata2").innerHTML += '<img width="250" height="250" src="static/images/id2.JPG">';
         document.getElementById("sample_metadata3").innerHTML += '<img width="250" height="250" src="static/images/id3.jpg">';
         document.getElementById("sample_metadata4").innerHTML += '<img width= "250" height="250"src="static/images/id4.JPG">';
-        sample_metadata0.append(Textout0);
+        document.getElementById("sample_metadata0").innerHTML += ` ${firstname[0]}  ${lastname[0]}\
+                         Rank: ${rank[0]}\
+                         Wins: ${wins[0]}\
+                        Nationality:${nationality[0]} \
+                        Birthday:${birthday[0]}\
+                         ${bio[0]}`
         sample_metadata1.append(Textout1);
         sample_metadata2.append(Textout2);
         sample_metadata3.append(Textout3);
