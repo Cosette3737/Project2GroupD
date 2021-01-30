@@ -14,103 +14,53 @@ fetch('/top5_data')
     var firstname = topData.map(drivers =>drivers[1]);
     var lastname = topData.map(drivers =>drivers[2]);
     var nationality = topData.map(drivers =>drivers[3]);
-    var birthday = (topData.map(drivers =>drivers[4]));
     var bio = topData.map(drivers =>drivers[6]);
 
     var rank = [1,2,3,4,5]
     
-    // var Textout0 = (
-    //                 `${firstname[0]}  ${lastname[0]} <br>
-    //                 Rank: ${rank[0]}\n
-    //                 Wins: ${wins[0]}\n
-    //                 Nationality:${nationality[0]} \n
-    //                 Birthday:${birthday[0]}\n
-    //                 ${bio[0]}\n`
-    //                 )
-    //     console.log(Textout0); 
-
-        var Textout1 = (`${firstname[1]} ${lastname[1]} \n\n
-                         Rank: ${rank[1]}'\n
-                         Wins: ${wins[1]}\n
-                         Nationality: ${nationality[1]} \n
-                         Birthday: ${birthday[1]}\n'
-                         `)
-        //console.log(Textout1); 
-
-        var Textout2 = (`${firstname[2]} ${lastname[2]} \n
-                    Rank: ${rank[2]}\n
-                    Wins: ${wins[2]}\n
-                    Nationality: ${nationality[2]}\n 
-                    Birthday: ${birthday[2]} <br>
-                    `)
-        //console.log(Textout2); 
-
-        var Textout3 = (`${firstname[3]} ${lastname[3]} \n
-                    Rank: ${rank[3]}\n
-                    Wins: ${wins[3]}\n
-                    Nationality: ${nationality[3]}\n 
-                    Birthday: ${birthday[3]}\n
-                    `)
-        //console.log(Textout3); 
-
-        var Textout4 = (`${firstname[4]} ${lastname[4]}\n 
-                    Rank: ${rank[4]}\n
-                    Wins: ${wins[4]}\n
-                    Nationality: ${nationality[4]} \n
-                    Birthday: ${birthday[4]}\n
-                    `)
+    
         //console.log(Textout4); 
         document.getElementById("sample_metadata0").innerHTML += '<img width="250" height="250" src="static/images/id0.jpg">';
         document.getElementById("sample_metadata1").innerHTML += '<img width="250" height="250" src="static/images/id1.JPG">';
         document.getElementById("sample_metadata2").innerHTML += '<img width="250" height="250" src="static/images/id2.JPG">';
         document.getElementById("sample_metadata3").innerHTML += '<img width="250" height="250" src="static/images/id3.jpg">';
         document.getElementById("sample_metadata4").innerHTML += '<img width= "250" height="250"src="static/images/id4.JPG">';
-        document.getElementById("sample_metadata0").innerHTML += ` ${firstname[0]}  ${lastname[0]}\n
+        
+        document.getElementById("sample_metadata0").innerHTML += ` ${firstname[0]}  ${lastname[0]}\
                          <br>Rank: ${rank[0]}\
                          <br>Wins: ${wins[0]}\
-                        <br>Nationality:${nationality[0]} \
+                        <br>Nationality: ${nationality[0]} \
                          ${bio[0]}`
         document.getElementById("sample_metadata1").innerHTML += ` ${firstname[1]}  ${lastname[1]}\
                          <br>Rank: ${rank[1]}\
                          <br>Wins: ${wins[1]}\
-                        <br>Nationality:${nationality[1]} \
+                        <br>Nationality: ${nationality[1]} \
                          ${bio[1]}`
         document.getElementById("sample_metadata2").innerHTML += ` ${firstname[2]}  ${lastname[2]}\n
                          <br>Rank: ${rank[2]}\
                          <br>Wins: ${wins[2]}\
-                        <br>Nationality:${nationality[2]} \
+                        <br>Nationality: ${nationality[2]} \
                          ${bio[2]}`
         document.getElementById("sample_metadata3").innerHTML += ` ${firstname[3]}  ${lastname[3]}\n
                          <br>Rank: ${rank[3]}\
                          <br>Wins: ${wins[3]}\
-                        <br>Nationality:${nationality[3]} \
-                        <br>Birthday:${birthday[3]}\
+                        <br>Nationality: ${nationality[3]} \
                          ${bio[3]}`
-        document.getElementById("sample_metadata0").innerHTML += ` ${firstname[4]}  ${lastname[4]}\n
+        document.getElementById("sample_metadata4").innerHTML += ` ${firstname[4]}  ${lastname[4]}\n
                          <br>Rank: ${rank[4]}\
                          <br>Wins: ${wins[4]}\
-                        <br>Nationality:${nationality[4]} \
-                        <br>Birthday:${birthday[4]}\
-                         ${bio[4]}`                              
-
-
-
-        sample_metadata1.append(Textout1);
-        sample_metadata2.append(Textout2);
-        sample_metadata3.append(Textout3);
-        sample_metadata4.append(Textout4);
-        document.getElementById("sample_metadata0").innerHTML += '<img width="250" height="250" src="static/images/flag0.JPG">';
-        document.getElementById("sample_metadata1").innerHTML += '<img width="250" height="250" src="static/images/flag1.JPG">';
-        document.getElementById("sample_metadata2").innerHTML += '<img width="250" height="250" src="static/images/flag1.JPG">';
-        document.getElementById("sample_metadata3").innerHTML += '<img width="250" height="250" src="static/images/flag3.JPG">';
-        document.getElementById("sample_metadata4").innerHTML += '<img width="250" height="250" src="static/images/flag4.JPG">';
+                        <br>Nationality: ${nationality[4]} \
+                         ${bio[4]}`                             
+        
+                         
+        
         document.getElementById("sample_metadata0").style.visibility='hidden'
         document.getElementById("sample_metadata1").style.visibility='hidden'
         document.getElementById("sample_metadata2").style.visibility='hidden'
         document.getElementById("sample_metadata3").style.visibility='hidden'
         document.getElementById("sample_metadata4").style.visibility='hidden';
         
-
+    console.log(sample_metadata4);
     //console.log( wins[1], rank[1],nationality[1], birthday[1], number[1], bio[1]);
     var svgArea = d3.select("body").select("svg");
      if (!svgArea.empty()) {
