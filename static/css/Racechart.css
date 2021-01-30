@@ -60,5 +60,5 @@ svg {
 .columns .column-container .column-value {
   dominant-baseline: middle;
   font-size: 14px;
-  color: white;
+  fill: white;
 }

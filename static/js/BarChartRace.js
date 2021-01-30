@@ -198,19 +198,6 @@ function BarChartRace(chartId, extendedSettings) {
     return this;
   }
 
-  /* async function render() {
-    for (const chartDataSet of chartDataSets) {
-      chartTransition = chartContainer
-        .transition()
-        .duration(chartSettings.duration)
-        .ease(d3.easeLinear);
-
-      draw(chartDataSet, chartTransition);
-
-      await chartTransition.end();
-    }
-  } */
-
   async function render(index = 0) {
     currentDataSetIndex = index;
     timerStart = d3.now();
