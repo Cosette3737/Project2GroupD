@@ -29,6 +29,7 @@ function createMap (mapData) {
         // set options
         var options = {
             colorAxis: {colors: ['#e7711c', '#4374e0']},
+            backgroundColor: '#d6d6d6'
         };
 
         // set where in html to put chart
