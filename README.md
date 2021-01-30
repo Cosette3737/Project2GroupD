@@ -11,11 +11,11 @@ Tasks
 - [x] 4. Examine CSVs and begin ETL process by creating postgresSQL database.
 - [x] 5. Write SQL requests for uniform databases for each of us.
 - [x] 6. Chose Geochart as our new library and have examined code for it.
-- [ ] 7. Read documentation on said dictionary.
-- [ ] 8. Examine code behind chosen illustrations to help implement them into our code.
-- [ ] 9. With this knowledge in mind, begin coding HTML, CSS, and Javascript elements using these.
-- [ ] 10. Convert CSV's to JSON for Flask
-- [ ] 11. Create Flask app
+- [x] 7. Read documentation on said dictionary.
+- [x] 8. Examine code behind chosen illustrations to help implement them into our code.
+- [x] 9. With this knowledge in mind, begin coding HTML, CSS, and Javascript elements using these.
+- [x] 10. Convert CSV's to JSON for Flask
+- [x] 11. Create Flask app
 
 As famed, fictional Formula 1 driver, Jean Girard once Said...
 
