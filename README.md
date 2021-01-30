@@ -40,12 +40,12 @@ Tasks
 - [x] 2. Write up proposal for approval.
 - [x] 3. Write serviceable readme for the initial use.
 - [x] 4. Examine CSVs and begin ETL process by creating postgresSQL database.
-- [x] 5. Write SQL requests for uniform databases for each of us.
-- [x] 6. Chose Geochart as our new library and have examined code for it.
-- [x] 7. Read documentation on said dictionary.
-- [x] 8. Examine code behind chosen illustrations to help implement them into our code.
-- [x] 9. With this knowledge in mind, begin coding HTML, CSS, and Javascript elements using these.
-- [x] 10. Convert CSV's to JSON for Flask
+- [x] 5. Convert CSV's to JSON for Flask
+- [x] 6. Write SQL requests for uniform databases for each of us.
+- [x] 7. Chose Geochart as our new library and have examined code for it.
+- [x] 8. Read documentation on said dictionary.
+- [x] 9. Examine code behind chosen illustrations to help implement them into our code.
+- [x] 10. With this knowledge in mind, begin coding HTML, CSS, and Javascript elements using these.
 - [x] 11. Create Flask app
 - [x] 12. Implement Jinja into our site architecture.
 
