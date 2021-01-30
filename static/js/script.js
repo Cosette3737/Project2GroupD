@@ -60,16 +60,16 @@ fetch('/top5_data')
                     Birthday: ${birthday[4]}\n
                     `)
         //console.log(Textout4); 
-        //document.getElementById("sample_metadata0").innerHTML += '<img width="250" height="250" src="static/images/id0.jpg">';
+        document.getElementById("sample_metadata0").innerHTML += '<img width="250" height="250" src="static/images/id0.jpg">';
         document.getElementById("sample_metadata1").innerHTML += '<img width="250" height="250" src="static/images/id1.JPG">';
         document.getElementById("sample_metadata2").innerHTML += '<img width="250" height="250" src="static/images/id2.JPG">';
         document.getElementById("sample_metadata3").innerHTML += '<img width="250" height="250" src="static/images/id3.jpg">';
         document.getElementById("sample_metadata4").innerHTML += '<img width= "250" height="250"src="static/images/id4.JPG">';
-        document.getElementById("sample_metadata0").innerHTML += ` ${firstname[0]}  ${lastname[0]}\
-                         Rank: ${rank[0]}\
-                         Wins: ${wins[0]}\
-                        Nationality:${nationality[0]} \
-                        Birthday:${birthday[0]}\
+        document.getElementById("sample_metadata0").innerHTML += ` ${firstname[0]}  ${lastname[0]}\n
+                         <br>Rank: ${rank[0]}\
+                         <br>Wins: ${wins[0]}\
+                        <br>Nationality:${nationality[0]} \
+                        <br>Birthday:${birthday[0]}\
                          ${bio[0]}`
         sample_metadata1.append(Textout1);
         sample_metadata2.append(Textout2);
