@@ -16,50 +16,38 @@ body{
 } 
 
 #sample_metadata0{
-    position: relative;
+    display: inline-block;
+    position: absolute;
     visibility: hidden;
-    height: 80px;
-    width: 80px;
-    font:50px;
-    position:sticky ;
-    offset-position: 30px;
+    top: 100px;
+    left: 655px;
 }
 #sample_metadata1{
-    position: relative;
+    display: inline-block;
+    position: absolute;
     visibility: hidden;
-    height: 80px;
-    width: 80px;
-    font:50px;
-    position:sticky ;
-    
+    top: 100px;
+    left: 655px;
 }
-
-
 #sample_metadata2{
-    position: relative;
+    display: inline-block;
+    position: absolute;
     visibility: hidden;
-    height: 80px;
-    width: 80px;
-    font:50px;
-    position:sticky ;
+    top: 100px;
+    left: 655px;
 }
 #sample_metadata3{
-    position: relative;
+    display: inline-block;
+    position: absolute;
     visibility: hidden;
-    height: 80px;
-    width: 80px;
-    font:50px;
-    position:sticky ;
-    
+    top: 100px;
+    left: 655px;
 }
 #sample_metadata4{
-    position: relative;
+    display: inline-block;
+    position: absolute;
     visibility: hidden;
-    height: 80px;
-    width: 80px;
-    font:50px;
-    position:sticky ;
-    
+    top: 100px;
+    left: 655px;
 }
 
-}

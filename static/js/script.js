@@ -16,53 +16,55 @@ fetch('/top5_data')
     var nationality = topData.map(drivers =>drivers[3]);
     var birthday = (topData.map(drivers =>drivers[4]));
     var bio = topData.map(drivers =>drivers[6]);
+
     var rank = [1,2,3,4,5]
-    console.log(wins);
+    
     var Textout0 = (
-                    `Driver: ${firstname[0]}  ${lastname[0]} 
+                    `${firstname[0]}  ${lastname[0]} \n
                     Rank: ${rank[0]}\n
                     Wins: ${wins[0]}\n
                     Nationality:${nationality[0]} \n
                     Birthday:${birthday[0]}\n
-                    Driver Bio:${bio[0]}\n`)
+                    ${bio[0]}\n`
+                    )
         console.log(Textout0); 
 
-        var Textout1 = (`Driver: ${firstname[1]} ${lastname[1]} \n
-                         Rank: ${rank[1]}\n
+        var Textout1 = (`${firstname[1]} ${lastname[1]} \n\n
+                         Rank: ${rank[1]}'\n
                          Wins: ${wins[1]}\n
                          Nationality: ${nationality[1]} \n
-                         Birthday: ${birthday[1]}\n
-                         Driver Bio: ${bio[1]}\n`)
+                         Birthday: ${birthday[1]}\n'
+                         `)
         //console.log(Textout1); 
 
-        var Textout2 = (`Driver: ${firstname[2]} ${lastname[2]} \n
+        var Textout2 = (`${firstname[2]} ${lastname[2]} \n
                     Rank: ${rank[2]}\n
                     Wins: ${wins[2]}\n
                     Nationality: ${nationality[2]}\n 
                     Birthday: ${birthday[2]}\n
-                    Driver Bio: ${bio[2]}\n`)
+                    `)
         //console.log(Textout2); 
 
-        var Textout3 = (`Driver: ${firstname[3]} ${lastname[3]} \n
+        var Textout3 = (`${firstname[3]} ${lastname[3]} \n
                     Rank: ${rank[3]}\n
                     Wins: ${wins[3]}\n
                     Nationality: ${nationality[3]}\n 
                     Birthday: ${birthday[3]}\n
-                    Driver Bio: ${bio[3]}\n`)
+                    `)
         //console.log(Textout3); 
 
-        var Textout4 = (`Driver: ${firstname[4]} ${lastname[4]}\n 
+        var Textout4 = (`${firstname[4]} ${lastname[4]}\n 
                     Rank: ${rank[4]}\n
                     Wins: ${wins[4]}\n
                     Nationality: ${nationality[4]} \n
                     Birthday: ${birthday[4]}\n
-                    Driver Bio: ${bio[4]}\n`)
+                    `)
         //console.log(Textout4); 
-        document.getElementById("sample_metadata0").innerHTML += '<img width="150" height="150" src="static/images/id0.jpg">';
-        document.getElementById("sample_metadata1").innerHTML += '<img width="150" height="150" src="static/images/id1.JPG">';
-        document.getElementById("sample_metadata2").innerHTML += '<img width="150" height="150" src="static/images/id2.JPG">';
-        document.getElementById("sample_metadata3").innerHTML += '<img width="150" height="150" src="static/images/Sebid.jpg">';
-        document.getElementById("sample_metadata4").innerHTML += '<img width="150" height="150" src="static/images/id5.JPG">';
+        document.getElementById("sample_metadata0").innerHTML += '<img width="250" height="250" src="static/images/id0.jpg">';
+        document.getElementById("sample_metadata1").innerHTML += '<img width="250" height="250" src="static/images/id1.JPG">';
+        document.getElementById("sample_metadata2").innerHTML += '<img width="250" height="250" src="static/images/id2.JPG">';
+        document.getElementById("sample_metadata3").innerHTML += '<img width="250" height="250" src="static/images/id3.jpg">';
+        document.getElementById("sample_metadata4").innerHTML += '<img width= "250" height="250"src="static/images/id4.JPG">';
         sample_metadata0.append(Textout0);
         sample_metadata1.append(Textout1);
         sample_metadata2.append(Textout2);
@@ -73,7 +75,6 @@ fetch('/top5_data')
         document.getElementById("sample_metadata2").innerHTML += '<img width="250" height="250" src="static/images/flag1.JPG">';
         document.getElementById("sample_metadata3").innerHTML += '<img width="250" height="250" src="static/images/flag3.JPG">';
         document.getElementById("sample_metadata4").innerHTML += '<img width="250" height="250" src="static/images/flag4.JPG">';
-   
         document.getElementById("sample_metadata0").style.visibility='hidden'
         document.getElementById("sample_metadata1").style.visibility='hidden'
         document.getElementById("sample_metadata2").style.visibility='hidden'
@@ -111,7 +112,7 @@ fetch('/top5_data')
  // shift everything over by the margins
     var chartGroup = svg.append("g")
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
-        //.attr("rotate", 90);
+        
         
     svg.append('text')
         .attr('x', -330)
@@ -192,13 +193,13 @@ fetch('/top5_data')
             document.getElementById("sample_metadata2").style.visibility='hidden';
             document.getElementById("sample_metadata3").style.visibility='hidden';
             document.getElementById("sample_metadata4").style.visibility='hidden';
-        } else if (clickvalue == 51) {
+        } else if (clickvalue == 53) {
             document.getElementById("sample_metadata2").style.visibility='visible';
             document.getElementById("sample_metadata1").style.visibility='hidden';
             document.getElementById("sample_metadata0").style.visibility='hidden';
             document.getElementById("sample_metadata3").style.visibility='hidden';
             document.getElementById("sample_metadata4").style.visibility='hidden';
-        } else if (clickvalue == 41) {
+        } else if (clickvalue == 51) {
             document.getElementById("sample_metadata3").style.visibility='visible';
             document.getElementById("sample_metadata1").style.visibility='hidden';
             document.getElementById("sample_metadata2").style.visibility='hidden';
