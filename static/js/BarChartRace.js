@@ -1,12 +1,12 @@
 function BarChartRace(chartId, extendedSettings) {
   const chartSettings = {
-    width: 500,
+    width: 1000,
     height: 400,
     padding: 40,
     titlePadding: 5,
     columnPadding: 0.4,
     ticksInXAxis: 5,
-    duration: 3500,
+    duration: 5,
     ...extendedSettings
   };
 
@@ -177,6 +177,7 @@ function BarChartRace(chartId, extendedSettings) {
   }
 
   function addDataset(dataSet) {
+    console.log(dataSets);
     chartDataSets.push(dataSet);
 
     return this;

@@ -1,9 +1,16 @@
 const myChart = new BarChartRace("bar-chart-race");
-
-myChart
+grabData().then(dataSets => {
+  myChart
   .setTitle("Bar Chart Race Title")
-  .addDatasets(getData())
+  .addDatasets(dataSets)
   .render();
+})
+
+
+// myChart
+//   .setTitle("Bar Chart Race Title")
+//   .addDatasets(grabData())
+//   .render();
 
 d3.select("button").on("click", function() {
   if (this.innerHTML === "Stop") {

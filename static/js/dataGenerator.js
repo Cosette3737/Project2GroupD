@@ -1,9 +1,3 @@
-function getData() {
-  fetch("/race_chart_data").then(data => {
-  return data.json()
-  }).then(data => {
-    generateDataSets(data)
-  })}
   const nationalities = [
   "British",
   "German",
@@ -56,11 +50,21 @@ var nationalValues = [
   {name: "Venezuelan", value: 0}
 ];
 
-function generateDataSets(raceData) {
-  
+function grabData () {
+  return fetch("/race_chart_data").then(data => {
+    return data.json()}).then
+    (data => generateDataSets(data))};
 
+//     }).then(data => {
+//       generateDataSets(data)
+//     })
+// }
+
+
+
+function generateDataSets(raceData) {
   const dataSets = [];
-  
+  // console.log("It's full of stars!" + raceData);
   for (let i = 0; i < raceData.length; i++) {
     const nationality = raceData[i][0];
     nationalValue = nationalValues.find(n => n.name === nationality);
@@ -69,11 +73,11 @@ function generateDataSets(raceData) {
     dataSets.push({
 
       date: raceData[i][1],
-      dataSet: nationalValues
+      dataSet: JSON.parse(JSON.stringify(nationalValues))
     });
     // console.log(JSON.parse(JSON.stringify(dataSets)));
   }
-  console.log(JSON.parse(JSON.stringify(dataSets)));
+  // console.log(JSON.parse(JSON.stringify(dataSets)));
   return dataSets;
   
 }
