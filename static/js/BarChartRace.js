@@ -1,12 +1,12 @@
 function BarChartRace(chartId, extendedSettings) {
   const chartSettings = {
     width: 1000,
-    height: 400,
+    height: 500,
     padding: 40,
     titlePadding: 5,
     columnPadding: 0.4,
     ticksInXAxis: 5,
-    duration: 5,
+    duration: 35,
     ...extendedSettings
   };
 
