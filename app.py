@@ -94,6 +94,29 @@ def top5_data():
 
     return jsonify(top5_list)
 
+@app.route('/top5_data2', methods=['GET'])
+def top5_data2():
+    #create engine to connect to SQL database
+    engine = create_engine("postgresql://postgres:postgres@localhost/formula1")
+    #connect to SQL database
+    connection = engine.connect()
+
+    # creat dataframe of wins per country from database
+    top5_data2 = pd.read_sql('SELECT dw.wins, dw.forename, \
+        dw.surname, dw.nationality, d.driverNumber, d.url \
+        FROM driverWins AS dw \
+        JOIN drivers AS d \
+        ON dw.driverId=d.driverId \
+        ORDER BY dw.wins DESC\
+        LIMIT 5;', connection)
+
+    # update column headers
+    top5_data2.columns = ['Wins', 'First Name', 'Last Name', 'Nationality', 'Driver Number', 'Wikipedia URL']
+    # convert dataframe to dictionary
+    top5_dict = top5_data2.to_dict('index')
+
+    return jsonify(top5_dict)
+
 
 
 if __name__ == '__main__':
