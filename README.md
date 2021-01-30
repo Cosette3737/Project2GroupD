@@ -47,6 +47,7 @@ Tasks
 - [x] 9. With this knowledge in mind, begin coding HTML, CSS, and Javascript elements using these.
 - [x] 10. Convert CSV's to JSON for Flask
 - [x] 11. Create Flask app
+- [x] 12. Implement Jinja into our site architecture.
 
 As famed, fictional Formula 1 driver, Jean Girard once Said...
 
