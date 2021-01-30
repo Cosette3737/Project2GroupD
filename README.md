@@ -56,21 +56,21 @@ As famed, fictional Formula 1 driver, Jean Girard once Said...
 
 ### Top Formula 1 Drivers
 The home page introduces our proposal and uses a navbar to select which visualization to explore.
-![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/Proposal/Drawing.jpeg)
+![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/static/images/screenshot-home.png()
 
 ### Top 5 Winningest Drivers
 The first visualization showcases a interactive bar chart showing the top 5 Formula 1 drivers of all time.  When selecting a bar, the Driver's photo and information populates and displays within the same screen. 
 
-![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/Proposal/Drawing.jpeg)
+![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/static/images/screenshot-top5.png)
 
 ### Racing Chart
 The Racing Bar chart displays each countries number of wins dynamically over datasets duration of time.   
-![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/Proposal/Drawing.jpeg)
+![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/static/images/screenshot-racing.png)
 
 ### Wins Per Country
 Using a new library Geocharts from Googlecharts, this page displays the amount of wins per country in an interactive map.
-![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/Proposal/Drawing.jpeg)
+![Wins per Country Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/static/images/screenshot-map.png)
 
 ### Credits
 Credit is given sources of photos and datasets used in this project.
-![Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/Proposal/Drawing.jpeg)
+![Credit Image](https://raw.githubusercontent.com/Cosette3737/Project2GroupD/main/static/images/screenshot-credits.png)
