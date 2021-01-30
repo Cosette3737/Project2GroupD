@@ -1,8 +1,9 @@
-fetch("/race_chart_data").then(data => {
+function getData() {
+  fetch("/race_chart_data").then(data => {
   return data.json()
   }).then(data => {
     generateDataSets(data)
-  })
+  })}
   const nationalities = [
   "British",
   "German",
@@ -72,7 +73,7 @@ function generateDataSets(raceData) {
     });
     // console.log(JSON.parse(JSON.stringify(dataSets)));
   }
-  // console.log(JSON.parse(JSON.stringify(dataSets)));
+  console.log(JSON.parse(JSON.stringify(dataSets)));
   return dataSets;
   
 }

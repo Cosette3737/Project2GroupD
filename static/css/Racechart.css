@@ -2,6 +2,7 @@ html,
 body {
   display: flex;
   flex-direction: column;
+  background-image: url("/static/images/OldSchoolCar.jpg");
 }
 
 button {
