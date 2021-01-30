@@ -30,27 +30,28 @@ fetch('/top5_data')
                          <br>Rank: ${rank[0]}\
                          <br>Wins: ${wins[0]}\
                         <br>Nationality: ${nationality[0]} \
-                         ${bio[0]}`
+                         `
         document.getElementById("sample_metadata1").innerHTML += ` ${firstname[1]}  ${lastname[1]}\
                          <br>Rank: ${rank[1]}\
                          <br>Wins: ${wins[1]}\
                         <br>Nationality: ${nationality[1]} \
-                         ${bio[1]}`
+                         `
         document.getElementById("sample_metadata2").innerHTML += ` ${firstname[2]}  ${lastname[2]}\n
                          <br>Rank: ${rank[2]}\
                          <br>Wins: ${wins[2]}\
                         <br>Nationality: ${nationality[2]} \
-                         ${bio[2]}`
+                         `
         document.getElementById("sample_metadata3").innerHTML += ` ${firstname[3]}  ${lastname[3]}\n
                          <br>Rank: ${rank[3]}\
                          <br>Wins: ${wins[3]}\
                         <br>Nationality: ${nationality[3]} \
-                         ${bio[3]}`
+                         `
         document.getElementById("sample_metadata4").innerHTML += ` ${firstname[4]}  ${lastname[4]}\n
                          <br>Rank: ${rank[4]}\
                          <br>Wins: ${wins[4]}\
                         <br>Nationality: ${nationality[4]} \
-                         ${bio[4]}`                             
+                         `
+                                                     
         
 
         
