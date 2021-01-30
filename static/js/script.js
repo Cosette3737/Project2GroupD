@@ -52,7 +52,7 @@ fetch('/top5_data')
                         <br>Nationality: ${nationality[4]} \
                          ${bio[4]}`                             
         
-                         
+
         
         document.getElementById("sample_metadata0").style.visibility='hidden'
         document.getElementById("sample_metadata1").style.visibility='hidden'
@@ -94,8 +94,8 @@ fetch('/top5_data')
         
         
     svg.append('text')
-        .attr('x', -330)
-        .attr('y', -295)
+        .attr('x', 330)
+        .attr('y', 295)
         .attr('transform', 'rotate(-90)')
         .attr('text-anchor', 'middle')
         .text('Number of races Won')
