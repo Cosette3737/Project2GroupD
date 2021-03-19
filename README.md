@@ -1,4 +1,4 @@
-# <p align ="center">Group D - Too Fast, Too Furious? A Data Driven Look at Formula 1 Racing </p>
+# <p align ="center">Too Fast, Too Furious? A Data Driven Look at Formula 1 Racing </p>
 
 ### Chosen Topic and Rationale: 
 We've chosen this dataset and topic because there is a variety of data in this dataset to examine. The proposal has a variety of interesting visualization ideas that we've decided to run with.
